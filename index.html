@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+  <div class="background">
+        <h1>SPLI <br> TTER</h1>
+    <div class="card-main">
+        
+      <div class="card-input">
+        
+        <div class="bill">
+          <label  for="bill">Bill</label>
+          <input class="input-input" type="text" nome="bill" placeholder="0">
+          <i class="fa-solid fa-brazilian-real-sign"></i>
+        </div>
+        
+        <div class="people">
+          <label  for="NumberOfPeople">Number of People</label>
+          <input class="input-input" type="text" nome="NumberOfPeople" placeholder="0">
+          <i class="fa-solid fa-brazilian-real-sign"></i>
+
+      </div>
+          
+      <div class="buttons">
+        <p class="select">Select Tip % </p>
+
+        <button class="button button1">5%</button>
+        <button class="button button2">10%</button>
+        <button class="button button3">15%</button>
+        <button class="button button4">25%</button>
+        <button class="button button5">50%</button>
+
+        <div class="custom">
+          <label  for="custom"></label>
+          <input class="custo" type="number" nome="custom" placeholder="Custom">
+      </div>
+
+      </div>
+        </div>
+        <div class="card-result">
+          <h3 class="tip"> Tip Amount</h3>
+          <h4 class="person">/ person</h4>
+
+          <h3 class="total"> Total</h3>
+          <h4 class="person2"> / person </h4>
+
+          <div>
+            
+            <input id="person" placeholder="0" disabled>
+
+          <div>
+            
+            <input id="total" placeholder="0" disabled >
+            
+          </div>
+
+          <div>
+
+            <button class="reset" >RESET</button>
+
+          </div>
+
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Manoela Urias</a>.
+  </div>
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/5385270ec5.js" crossorigin="anonymous"></script>
+</body>
+</html>

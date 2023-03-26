@@ -1,0 +1,253 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Rashi+Hebrew&family=Space+Mono&display=swap');
+
+
+.background{
+    background: hsl(185, 41%, 84%);
+    position:absolute;
+    width: 937px;
+    height: 618px;
+    margin-left: auto;
+    margin-top: auto;
+    top: 40px;
+    left: 200px;
+    text-align: center;
+    
+}
+
+h1{
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    position: absolute;
+    top: 39px;
+    left: 444px;
+    color: hsl(183, 100%, 15%);
+    letter-spacing: 5px;
+
+}
+
+.card-main{
+    background: hsl(0, 0%, 100%);
+    width: 570px;
+    height: 300px;
+    border-radius: 20px;
+    position: absolute;
+    left: 180px;
+    top: 150px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Space Mono', monospace;
+
+}
+
+.card-input{
+    background: hsl(0, 0%, 100%);
+    position: absolute;
+    height: 265px;
+    width: 265px;
+    left: 15px;
+    top: 18px;
+    border-radius: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Space Mono', monospace;
+
+
+}
+
+
+.bill {
+    font-size: 12px;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    color: rgb(155, 155, 155);
+}
+
+.fa-solid {
+    
+    font-weight: 900;
+    position: absolute;
+    top: 25px; 
+    left: 12px; 
+    
+}
+
+.input-input{
+
+    width: 227px;
+    border: none;
+    background: hsl(189, 41%, 97%);
+    height: 25px;
+    border-radius: 6px;
+    text-align: end;
+    color: hsl(183, 100%, 15%);
+    font-size: 18px;
+}
+
+.select{
+    font-size: 12px;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    color: rgb(155, 155, 155);
+    position: absolute;
+    top: 63px;
+}
+
+.button{
+    background: hsl(183, 100%, 15%);
+    border: none;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.button1{
+    position: absolute;
+    top: 107px;
+    left: -1px;
+}
+
+.button2{
+    position: absolute;
+    top: 107px;
+    left: 78px;
+}
+
+.button3{
+    position: absolute;
+    top: 107px;
+    left: 157px;
+}
+
+.button4{
+    position: absolute;
+    top: 146px;
+    left: -1px;
+}
+
+.button5{
+    position: absolute;
+    top: 146px;
+    left: 78px;
+}
+
+.custo {
+    color: white;
+    background: hsl(183, 100%, 15%);
+    border: none;
+    width: 68px;
+    height: 28px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    top: 146px;
+    left: 157px;
+}
+
+.custo:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.custo::-webkit-outer-spin-button,
+.custo::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.people {
+    font-size: 12px;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-size: 12px;
+    position: absolute;
+    top: 215px;
+    color: rgb(155, 155, 155);
+}
+
+.fa-solid {
+    
+    font-weight: 900;
+    position: absolute;
+    top: 25px; 
+    left: 12px; 
+    
+}
+
+.card-result{
+    background: hsl(183, 100%, 15%);
+    position: absolute;
+    height: 265px;
+    width: 265px;
+    left: 285px;
+    top: 18px;
+    border-radius: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+
+.tip{
+    font-size: 11px;
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Space Mono', monospace;
+}
+
+.person{
+    font-size: 9px;
+    position: absolute;
+    top: 42px;
+    left: 24px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(184, 14%, 56%);
+}
+
+.total{
+    font-size: 11px;
+    position: absolute;
+    top: 86px;
+    left: 26px;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Space Mono', monospace;
+}
+
+.person2{
+    font-size: 9px;
+    position: absolute;
+    top: 104px;
+    left: 24px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(184, 14%, 56%);
+}
+
+.reset{
+    position: absolute;
+    top: 209px;
+    left: 26px;
+    width: 215px;
+    height: 34px;
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    border: none;
+    font-size: 14px;
+    color: hsl(183, 100%, 15%);
+    background: hsl(172, 67%, 45%);
+    font-weight: bold;
+}
+
+.attribuition{
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    top: 581px;
+    left: 50%;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
