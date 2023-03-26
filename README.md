@@ -1,6 +1,6 @@
 # Calculadora de Valor e Desconto da Comanda do Restaurante
 
-Este projeto é uma calculadora front-end que permite aos usuários calcular o valor total da comanda de um restaurante, incluindo descontos com base na quantidade de pessoas que comeram.
+Este é um projeto front-end em desenvolvimento que visa criar uma calculadora de valor e desconto da comanda de um restaurante, de acordo com a quantidade de pessoas que comeram. O projeto utiliza as tecnologias HTML, CSS e JavaScript.
 
 <h2> Funcionalidades </h2>
 
@@ -24,3 +24,4 @@ Este projeto é uma calculadora front-end que permite aos usuários calcular o v
 <p> 3. Faça o commit de suas alterações: git commit -m 'Adicionei uma nova funcionalidade'</p>
 <p> 4. Envie suas alterações para o branch principal: git push origin minha-nova-funcionalidade</p>
 <p> 5. Abra um pull request para revisão.</p>
+
