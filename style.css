@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Rashi+Hebrew&family=Space+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Rashi+Hebrew&family=Space+Mono&display=swap');
 
 
@@ -103,6 +103,9 @@ h1{
     width: 70px;
     height: 30px;
     border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+
 }
 
 .button1{
@@ -137,7 +140,7 @@ h1{
 
 .custo {
     color: white;
-    background: hsl(183, 100%, 15%);
+    background: hsl(189, 41%, 97%);
     border: none;
     width: 68px;
     height: 28px;
@@ -147,6 +150,7 @@ h1{
     position: absolute;
     top: 146px;
     left: 157px;
+    font-weight: bold;
 }
 
 .custo:focus::-webkit-input-placeholder {
@@ -242,12 +246,55 @@ margin: 0;
     font-weight: bold;
 }
 
-.attribuition{
+.attribution{
     font-size: 11px;
     text-align: center;
     position: absolute;
     top: 581px;
-    left: 50%;
+    left: 35%;
 }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+
+[data-dinheiro1]{
+    position: absolute;
+    top: 46px;
+    left: 132px;
+    color: hsl(172, 67%, 45%);
+    font-size: 22px;
+}
+
+.person-valor{
+    position: absolute;
+    top: 26px;
+    left: 156px;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: 'Space Mono', monospace;
+
+    
+}
+input{
+    color: hsl(172, 67%, 45%)
+
+}
+
+.total-valor{
+position: absolute;
+top: 90px;
+left: 156px;
+background: none;
+border: none;
+font-weight: bold;
+font-size: 36px;
+font-family: 'Space Mono', monospace;
+
+}
+
+[data-dinheiro2]{
+    position: absolute;
+    top: 109px;
+    left: 132px;
+    color: hsl(172, 67%, 45%);
+    font-size: 22px;
+}
