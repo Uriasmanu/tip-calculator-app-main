@@ -2,22 +2,23 @@
 
 Este é um projeto front-end em desenvolvimento que visa criar uma calculadora de valor e desconto da comanda de um restaurante, de acordo com a quantidade de pessoas que comeram. O projeto utiliza as tecnologias HTML, CSS e JavaScript.
 
-## Funcionalidades 
+## Funcionalidades
 
 - Calcule o valor total da comanda do restaurante com base no número de pessoas que comeram;
 - Inclui um desconto na comanda;
-- Mostre o valor total, o valor do desconto e o valor final por pessoa da comanda. </li>
+- Mostre o valor total, o valor do desconto e o valor final por pessoa da comanda. 
 
-## Tecnologias Utilizadas 
+## Tecnologias Utilizadas
+
 Este projeto utiliza as seguintes tecnologias:
 
-- HTML5 
+- HTML5
 - CSS3
 - JavaScript
 
-## Contribuindo 
+## Contribuindo
 
-<p>Contribuições são sempre bem-vindas! Se você deseja contribuir com este projeto, siga as etapas abaixo:
+Contribuições são sempre bem-vindas! Se você deseja contribuir com este projeto, siga as etapas abaixo:
 
  1. Faça um fork deste repositório;
  2. Crie um novo branch com suas alterações: git checkout -b minha-nova-funcionalidade
