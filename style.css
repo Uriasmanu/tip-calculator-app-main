@@ -56,7 +56,7 @@ h1{
 
 
 .bill {
-    font-size: 12px;
+    font-size: 10px;
     align-items: flex-start;
     display: flex;
     flex-wrap: nowrap;
@@ -114,7 +114,7 @@ margin: 0;
 }
 
 .select{
-    font-size: 12px;
+    font-size: 10px;
     align-items: flex-start;
     display: flex;
     flex-wrap: nowrap;
@@ -211,12 +211,11 @@ button:hover{
 margin: 0;
 }
 .people {
-    font-size: 12px;
+    font-size: 10px;
     align-items: flex-start;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    font-size: 12px;
     position: absolute;
     top: 215px;
     color: rgb(155, 155, 155);
@@ -356,5 +355,8 @@ font-family: 'Space Mono', monospace;
 span{
     color: red;
     font-family: 'Space Mono', monospace;
+    position: absolute;
+    left: 148px;
+    font-size: 10px;
 
 }
