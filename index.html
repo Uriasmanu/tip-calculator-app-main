@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -21,16 +21,20 @@
         
         <div class="bill">
           <label  for="bill">Bill</label>
-          <input class="input-input" type="text" nome="bill" placeholder="0">
+          <input class="input-input" type="number" step="any" min="0" nome="bill" placeholder="0">
           <i class="fa-solid fa-brazilian-real-sign"></i>
         </div>
         
-        <div class="people">
-          <label  for="NumberOfPeople">Number of People</label>
-          <input class="input-input" type="text" nome="NumberOfPeople" placeholder="0">
-          <i class="fa-solid fa-brazilian-real-sign"></i>
+        <form action="">
 
-      </div>
+          <div class="people">
+              <label  for="NumberOfPeople">Number of People</label>
+              <input class="input-input" type="number" step="any" min="1" nome="NumberOfPeople" placeholder="0" id="valor" >
+              <i class="fa-solid fa-brazilian-real-sign"></i>
+              <span id="mensagem-erro" ></span>
+          </div>
+
+      </form>
           
       <div class="buttons">
         <p class="select">Select Tip % </p>
@@ -43,7 +47,7 @@
 
         <div class="custom">
           <label  for="custom"></label>
-          <input class="custo" type="number" nome="custom" placeholder="Custom">
+          <input class="custo" type="number"  min="0" nome="custom" placeholder="Custom">
       </div>
 
       </div>
@@ -71,7 +75,7 @@
 
           <div>
 
-            <button class="reset" >RESET</button>
+            <button class="reset" id="reset">RESET</button>
 
           </div>
 

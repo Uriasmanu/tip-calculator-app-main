@@ -64,6 +64,17 @@ h1{
     color: rgb(155, 155, 155);
 }
 
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
 .fa-solid {
     
     font-weight: 900;
@@ -83,6 +94,23 @@ h1{
     text-align: end;
     color: hsl(183, 100%, 15%);
     font-size: 18px;
+    font-family: 'Space Mono', monospace;
+
+}
+
+.input-input:hover{
+    cursor: pointer;
+}
+
+.input-input:focus{
+    border: solid 2px hsl(172, 67%, 45%);
+    outline: none;
+    
+
+}
+
+.input-input:focus::-webkit-input-placeholder {
+    color: transparent;
 }
 
 .select{
@@ -138,6 +166,13 @@ h1{
     left: 78px;
 }
 
+button:hover{
+    background: hsl(172, 67%, 45%);
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+
+}
+
 .custo {
     color: white;
     background: hsl(189, 41%, 97%);
@@ -151,6 +186,19 @@ h1{
     top: 146px;
     left: 157px;
     font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+
+
+}
+
+.custo:focus{
+    border: solid 2px hsl(172, 67%, 45%);
+    outline: none;
+
+}
+.custo:hover{
+    cursor: pointer;
 }
 
 .custo:focus::-webkit-input-placeholder {
@@ -242,8 +290,14 @@ margin: 0;
     border: none;
     font-size: 14px;
     color: hsl(183, 100%, 15%);
-    background: hsl(172, 67%, 45%);
+    background:  hsl(186, 14%, 43%);
     font-weight: bold;
+}
+
+.reset:hover{
+    cursor: pointer;
+    background: hsl(172, 67%, 45%);
+
 }
 
 .attribution{
@@ -297,4 +351,10 @@ font-family: 'Space Mono', monospace;
     left: 132px;
     color: hsl(172, 67%, 45%);
     font-size: 22px;
+}
+
+span{
+    color: red;
+    font-family: 'Space Mono', monospace;
+
 }
