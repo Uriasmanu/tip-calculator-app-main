@@ -38,4 +38,26 @@ numero.addEventListener('input', function() {
   }
 });
 
-var valorInicial = document.getElementById("#bill");
+/*const valorInicial = document.getElementById("bill"); // obter a referência ao elemento input
+let bill = ''; // inicializar a variável inputValue
+valorInicial.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') { // verificar se a tecla pressionada foi "Enter"
+    bill = valorInicial.value; // acessar o valor inserido no input e armazená-lo em inputValue
+    console.log(bill); // imprimir o valor inserido no console
+  }
+});*/
+
+function InputDoValor(inputElement, onEnterPressed) {
+  inputElement.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      const value = inputElement.value;
+      onEnterPressed(value);
+    }
+    
+  });
+}
+
+  const valorInicial = document.getElementById("bill");
+  InputDoValor(valorInicial, function(value) {
+    console.log(value);
+  })
