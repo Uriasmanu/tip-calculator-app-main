@@ -37,3 +37,5 @@ numero.addEventListener('input', function() {
     numero.style.borderColor = ""; // remove a cor da borda caso o valor seja válido
   }
 });
+
+var valorInicial = document.getElementById("#bill");
