@@ -61,3 +61,22 @@ function InputDoValor(inputElement, onEnterPressed) {
   InputDoValor(valorInicial, function(value) {
     console.log(value);
   })
+
+  var desconto = document.querySelectorAll(".button");
+
+  function valorDesconto (valor){
+    valor.addEventListener("click", function(event){
+      
+    })
+  }
+  
+  console.log(desconto)
+
+  desconto.forEach( (elemento) => {
+    elemento.addEventListener('click', (evento) => {
+
+      
+        
+    })
+})
+
