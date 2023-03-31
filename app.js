@@ -62,7 +62,7 @@ numero.addEventListener('input', function() {
 
 const descontoCustom = document.getElementById("numero");
 InputDoValor(descontoCustom, function(valuedesconto) {
-  console.log(valuedesconto/100);
+  console.log(valuedesconto/100); // imprime o valor em decimal do desconto para facilitar o calculo final
 })
 
 
@@ -79,13 +79,12 @@ InputDoValor(descontoCustom, function(valuedesconto) {
   buttons.forEach(button => {
     button.addEventListener('click', () => {
       const tipPercent = button.textContent.replace('%', ''); // remove o símbolo de porcentagem do texto do botão
-      console.log(tipPercent/100); // imprime o valor da gorjeta selecionada no console
+      console.log(tipPercent/100); // // imprime o valor em decimal do desconto para facilitar o calculo final
     });
   });
-  
-  
 
-function ValorFinal (valor, descontar, dividir) {
-    
-  }
-
+  reset.addEventListener('click', function() {
+    const valorTotalPorPessoas = (valorBill * valorDesconto / 100) / numeroPessoas.value;
+    console.log(valorTotalPorPessoas);
+  });
+  
