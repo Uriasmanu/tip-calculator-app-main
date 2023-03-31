@@ -1,29 +1,26 @@
 var form = document.querySelector('form');
 var reset = document.querySelector("#reset");
-var pessoas = document.querySelector("#valor");
 var mensagemErro = document.querySelector("#mensagem-erro");
 
-reset.addEventListener('click', function(evento)  {
-    if (pessoas.value <= 0 ) {
-      evento.preventDefault(); // impede o envio do formulário
+var pessoas = document.querySelector("#valor");
+
+  pessoas.addEventListener('input', function() {
+    if (!Number.isInteger(parseFloat(pessoas.value)) || pessoas.value < 0) {
       mensagemErro.textContent = "Can't be zero"; // exibe a mensagem de erro
+      pessoas.reportValidity();
       pessoas.style.borderColor = "red"; // define a cor da borda como vermelha
+  
     } else {
       mensagemErro.textContent = ''; // remove a mensagem de erro caso o valor seja válido
+      pessoas.setCustomValidity("");
       pessoas.style.borderColor = ""; // remove a cor da borda caso o valor seja válido
     }
   });
 
-  pessoas.addEventListener('keydown', function(evento) {
-    if (evento.key === 'Enter' && pessoas.value <= 0) {
-      evento.preventDefault(); // impede o envio do formulário
-      mensagemErro.textContent = "Can't be zero"; // exibe a mensagem de erro
-      pessoas.style.borderColor = "red"; // define a cor da borda como vermelha
-    } else {
-      mensagemErro.textContent = ''; // remove a mensagem de erro caso o valor seja válido
-      pessoas.style.borderColor = ""; // remove a cor da borda caso o valor seja válido
-    }
-  });
+  const numeroPessoas = document.getElementById("valor");
+InputDoValor(numeroPessoas, function(value) {
+  console.log(value);
+})
 
   var numero = document.querySelector("#numero");
 numero.addEventListener('input', function() {
@@ -38,14 +35,11 @@ numero.addEventListener('input', function() {
   }
 });
 
-/*const valorInicial = document.getElementById("bill"); // obter a referência ao elemento input
-let bill = ''; // inicializar a variável inputValue
-valorInicial.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') { // verificar se a tecla pressionada foi "Enter"
-    bill = valorInicial.value; // acessar o valor inserido no input e armazená-lo em inputValue
-    console.log(bill); // imprimir o valor inserido no console
-  }
-});*/
+const descontoCustom = document.getElementById("numero");
+InputDoValor(descontoCustom, function(valuedesconto) {
+  console.log(valuedesconto/100);
+})
+
 
 function InputDoValor(inputElement, onEnterPressed) {
   inputElement.addEventListener('keydown', function(event) {
@@ -70,13 +64,20 @@ function InputDoValor(inputElement, onEnterPressed) {
     })
   }
   
-  console.log(desconto)
+  const buttons = document.querySelectorAll('.button');
 
-  desconto.forEach( (elemento) => {
-    elemento.addEventListener('click', (evento) => {
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tipPercent = button.textContent.replace('%', ''); // remove o símbolo de porcentagem do texto do botão
+      console.log(tipPercent/100); // imprime o valor da gorjeta selecionada no console
+    });
+  });
+  
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // impede o envio do formulário
+  });
 
-      
-        
-    })
-})
+function ValorFinal (valor, descontar, dividir) {
+    
+  }
 
