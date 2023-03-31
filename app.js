@@ -8,6 +8,8 @@ let valorBill;
 const valorInicial = document.getElementById("bill"); // Captura o elemento bill
 InputDoValor(valorInicial, function(value) {
   valorBill = value; //armarzena o valor do input
+ console.log(valorBill);
+
 })
 
 function InputDoValor(inputElement, onEnterPressed) { // função que recebe dois parametros
@@ -23,10 +25,6 @@ function InputDoValor(inputElement, onEnterPressed) { // função que recebe doi
 form.addEventListener('submit', function(event) {
   event.preventDefault(); // impede o envio do formulário na hora que o enter é clicado
 });
-
-console.log(valorBill);
-
-
 
 
 var pessoas = document.querySelector("#valor");
