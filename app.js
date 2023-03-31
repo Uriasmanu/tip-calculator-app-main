@@ -1,6 +1,33 @@
-var form = document.querySelector('form');
+const form = document.querySelector('form');
 var reset = document.querySelector("#reset");
 var mensagemErro = document.querySelector("#mensagem-erro");
+
+let valorBill;
+
+//Recebendo os valores enviado no input bill
+const valorInicial = document.getElementById("bill"); // Captura o elemento bill
+InputDoValor(valorInicial, function(value) {
+  valorBill = value; //armarzena o valor do input
+})
+
+function InputDoValor(inputElement, onEnterPressed) { // função que recebe dois parametros
+  inputElement.addEventListener('keydown', function(event) { //inputElemento recebe o escutador de clique no teclado
+    if (event.key === 'Enter') { // Se o teclado for o enter então..
+      const value = inputElement.value; //a const value recebe o valor da tecla que foi clicado
+      onEnterPressed(value); //recebe o valor do input apos o clique do enter
+    }
+    
+  });
+}
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // impede o envio do formulário na hora que o enter é clicado
+});
+
+console.log(valorBill);
+
+
+
 
 var pessoas = document.querySelector("#valor");
 
@@ -41,21 +68,6 @@ InputDoValor(descontoCustom, function(valuedesconto) {
 })
 
 
-function InputDoValor(inputElement, onEnterPressed) {
-  inputElement.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-      const value = inputElement.value;
-      onEnterPressed(value);
-    }
-    
-  });
-}
-
-  const valorInicial = document.getElementById("bill");
-  InputDoValor(valorInicial, function(value) {
-    console.log(value);
-  })
-
   var desconto = document.querySelectorAll(".button");
 
   function valorDesconto (valor){
@@ -73,9 +85,7 @@ function InputDoValor(inputElement, onEnterPressed) {
     });
   });
   
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // impede o envio do formulário
-  });
+  
 
 function ValorFinal (valor, descontar, dividir) {
     
