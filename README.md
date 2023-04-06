@@ -1,6 +1,6 @@
 # Calculadora de Valor e Desconto da Comanda do Restaurante
 
-Este é um projeto front-end em desenvolvimento que visa criar uma calculadora de valor e desconto da comanda de um restaurante, de acordo com a quantidade de pessoas que comeram. O projeto utiliza as tecnologias HTML, CSS e JavaScript.
+Este é um projeto front-end do site https://www.frontendmentor.io que disponibiliza propostas de projetos para praticar. Ele esta em desenvolvimento, e tem como objetivo criar uma calculadora de valor e desconto da comanda de um restaurante, de acordo com a quantidade de pessoas que comeram. O projeto utiliza as tecnologias HTML, CSS e JavaScript. 
 
 ## Funcionalidades
 
