@@ -325,6 +325,8 @@ margin: 0;
     font-weight: bold;
     font-size: 32px;
     font-family: 'Space Mono', monospace;
+    width: 110px;
+    overflow: hidden;
 
     
 }
@@ -342,6 +344,8 @@ border: none;
 font-weight: bold;
 font-size: 30px;
 font-family: 'Space Mono', monospace;
+width: 120px;
+overflow: inherit;
 
 }
 
