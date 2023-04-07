@@ -1,81 +1,89 @@
-const form = document.querySelector('form');
-const reset = document.querySelector("#reset");
-const mensagemErro = document.querySelector("#mensagem-erro");
+const billInput = document.getElementById('bill');
+const numberOfPeopleInput = document.getElementById('valor');
+const tipButtons = document.querySelectorAll('.buttons button');
+const customTipInput = document.getElementById('numero');
+const personTipOutput = document.getElementById('person');
+const totalTipOutput = document.getElementById('total');
+const resetButton = document.getElementById('reset');
+const errorMessage = document.getElementById('mensagem-erro');
 
+let billValue = 0;
+let numberOfPeopleValue = 1;
+let tipPercentageValue = 0;
 
-let valorBill;
-//Recebendo os valores enviado no input bill
-const valorInicial = document.getElementById("bill"); 
-
-InputDoValor(valorInicial, function(value) {
-valorBill = value;
-console.log(valorBill);
-});
-
-function InputDoValor(inputElement, onEnterPressed) { 
-inputElement.addEventListener('keydown', function(event) {
-if (event.key === 'Enter') {
-const value = inputElement.value;
-onEnterPressed(value); //recebe o valor do input apos o clique do enter
-}
-});
+// atualiza os valores de entrada de gorjeta, quando um botão de gorjeta é clicado
+function updateTipPercentage(event) {
+  tipPercentageValue = Number(event.target.innerText.replace('%', ''));
+  customTipInput.value = ''; // limpa o valor do campo de entrada personalizado
+  calculateTip();
 }
 
-form.addEventListener('submit', function(event) {
-event.preventDefault();
-}); // impede o envio do formulário na hora que o enter é clicado
-
-const pessoas = document.querySelector("#valor");
-
-pessoas.addEventListener('input', function() {
-if (!Number.isInteger(parseFloat(pessoas.value)) || pessoas.value < 0) {
-mensagemErro.textContent = "Can't be zero"; // exibe a mensagem de erro
-pessoas.reportValidity();
-pessoas.style.borderColor = "red"; // define a cor da borda como vermelha
-} else {
-mensagemErro.textContent = ''; // remove a mensagem de erro caso o valor
-pessoas.setCustomValidity("");
-pessoas.style.borderColor = ""; // remove a cor da borda caso o valor seja válido
+// atualiza o valor de gorjeta personalizado, quando o usuário insere um valor
+function updateCustomTip(event) {
+  tipPercentageValue = Number(event.target.value);
+  calculateTip();
 }
-});
 
-let quantidadePessoas;
-const numeroPessoas = document.getElementById("valor");
-
-InputDoValor(numeroPessoas, function(value) {
-quantidadePessoas = value;
-console.log(quantidadePessoas);
-});
-
-const numero = document.querySelector("#numero");
-
-numero.addEventListener('input', function() {
-if (!Number.isInteger(parseFloat(numero.value)) || numero.value < 0 || numero.value > 90) {
-numero.setCustomValidity("Only integer numbers between 1 and 90 are allowed");
-numero.reportValidity();
-numero.style.borderColor = "red";
-} else {
-numero.setCustomValidity("");
-numero.style.borderColor = "";
+// atualiza o valor de entrada da conta quando o usuário insere um valor
+function updateBillValue(event) {
+  billValue = Number(event.target.value);
+  calculateTip();
 }
+
+// atualiza o valor de entrada do número de pessoas, quando o usuário insere um valor
+function updateNumberOfPeopleValue(event) {
+  numberOfPeopleValue = Number(event.target.value);
+  if (numberOfPeopleValue <= 0) {
+    numberOfPeopleInput.classList.add('error');
+    errorMessage.innerText = "Can't be zero";
+    numberOfPeopleInput.style.borderColor = "red"; // define a cor da borda como vermelha
+
+  } else {
+    numberOfPeopleInput.classList.remove('error');
+    numberOfPeopleInput.style.borderColor = ""; // define a cor da borda como vermelha
+    errorMessage.innerText = "";
+    calculateTip();
+  }
+}
+
+
+// calcula e atualiza os valores de saída da gorjeta e da conta
+function calculateTip() {
+  if (numberOfPeopleValue === 0) {
+    errorMessage.innerText = "Number of people can't be zero";
+    personTipOutput.value = '0.00';
+    totalTipOutput.value = '0.00';
+    return;
+  } else {
+    errorMessage.innerText = "";
+  }
+
+  const tipAmount = (billValue * (tipPercentageValue / 100)) / numberOfPeopleValue;
+  const totalAmount = (billValue / numberOfPeopleValue) + tipAmount;
+
+  personTipOutput.value = tipAmount.toFixed(2);
+  totalTipOutput.value = totalAmount.toFixed(2);
+}
+
+// redefine todos os valores
+function resetValues() {
+  billInput.value = '';
+  numberOfPeopleInput.value = 1;
+  customTipInput.value = '';
+  tipPercentageValue = 0;
+  billValue = 0;
+  numberOfPeopleValue = 1;
+  personTipOutput.value = '0.00';
+  totalTipOutput.value = '0.00';
+}
+
+// adiciona ouvintes de evento a todos os elementos relevantes
+tipButtons.forEach(button => {
+  button.addEventListener('click', updateTipPercentage);
 });
 
-let valorCustomizado;
-const descontoCustom = document.getElementById("numero");
-
-InputDoValor(descontoCustom, function(valuedesconto) {
-valorCustomizado = (valuedesconto/100);
-console.log(valorCustomizado);
-});
-
-let botaoDesconto;
-const buttons = document.querySelectorAll('.button');
-
-buttons.forEach(button => {
-button.addEventListener('click', () => {
-const tipPercent = button.textContent.replace('%', ''); // remove o símbolo de porcentagem do texto do botão
-botaoDesconto = (tipPercent/100)
-console.log(botaoDesconto);
-});
-});
+customTipInput.addEventListener('input', updateCustomTip);
+billInput.addEventListener('input', updateBillValue);
+numberOfPeopleInput.addEventListener('input', updateNumberOfPeopleValue);
+resetButton.addEventListener('click', resetValues);
 

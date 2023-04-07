@@ -318,12 +318,12 @@ margin: 0;
 
 .person-valor{
     position: absolute;
-    top: 26px;
-    left: 156px;
+    top: 31px;
+    left: 162px;
     background: none;
     border: none;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     font-family: 'Space Mono', monospace;
 
     
@@ -335,12 +335,12 @@ input{
 
 .total-valor{
 position: absolute;
-top: 90px;
-left: 156px;
+top: 95px;
+left: 140px;
 background: none;
 border: none;
 font-weight: bold;
-font-size: 36px;
+font-size: 30px;
 font-family: 'Space Mono', monospace;
 
 }
@@ -348,7 +348,7 @@ font-family: 'Space Mono', monospace;
 [data-dinheiro2]{
     position: absolute;
     top: 109px;
-    left: 132px;
+    left: 112px;
     color: hsl(172, 67%, 45%);
     font-size: 22px;
 }
