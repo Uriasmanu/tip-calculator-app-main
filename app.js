@@ -53,9 +53,7 @@ function calculateTip() {
     personTipOutput.value = '0.00';
     totalTipOutput.value = '0.00';
     return;
-  } else {
-    errorMessage.innerText = "";
-  }
+  } 
 
   const tipAmount = (billValue * (tipPercentageValue / 100)) / numberOfPeopleValue;
   const totalAmount = (billValue / numberOfPeopleValue) + tipAmount;
@@ -67,7 +65,7 @@ function calculateTip() {
 // redefine todos os valores
 function resetValues() {
   billInput.value = '';
-  numberOfPeopleInput.value = 1;
+  numberOfPeopleInput.value = 0;
   customTipInput.value = '';
   tipPercentageValue = 0;
   billValue = 0;
@@ -85,4 +83,3 @@ customTipInput.addEventListener('input', updateCustomTip);
 billInput.addEventListener('input', updateBillValue);
 numberOfPeopleInput.addEventListener('input', updateNumberOfPeopleValue);
 resetButton.addEventListener('click', resetValues);
-
