@@ -50,7 +50,6 @@ function updateNumberOfPeopleValue(event) {
 // calcula e atualiza os valores de saída da gorjeta e da conta
 function calculateTip() {
   if (numberOfPeopleValue === 0) {
-    errorMessage.innerText = "Number of people can't be zero";
     personTipOutput.value = '0.00';
     totalTipOutput.value = '0.00';
     return;
